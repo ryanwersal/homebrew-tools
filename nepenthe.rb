@@ -5,21 +5,21 @@
 class Nepenthe < Formula
   desc "Selective forgetfulness for macOS Time Machine"
   homepage "https://github.com/ryanwersal/nepenthe"
-  version "0.1.0"
+  version "0.1.1"
   license "GPL-3.0"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/ryanwersal/nepenthe/releases/download/v0.1.0/nepenthe_0.1.0_darwin_amd64.tar.gz"
-    sha256 "69b20045c5b839be940141ce3a94a98b7cab4c908514de82e179f53d6e333ac2"
+    url "https://github.com/ryanwersal/nepenthe/releases/download/v0.1.1/nepenthe_0.1.1_darwin_amd64.tar.gz"
+    sha256 "a942a19f6503bc76b0469700c2dbee02589e3af7249d7e25d7fb3824a900a409"
 
     define_method(:install) do
       bin.install "nepenthe"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/ryanwersal/nepenthe/releases/download/v0.1.0/nepenthe_0.1.0_darwin_arm64.tar.gz"
-    sha256 "dd4a3a26a2771c8911b52d797f851bd04ab723b468affad58838532dd98dd4e2"
+    url "https://github.com/ryanwersal/nepenthe/releases/download/v0.1.1/nepenthe_0.1.1_darwin_arm64.tar.gz"
+    sha256 "f6d24148bd7990cc7f2ca17289132433fbcdb871efe5dc0cefc50f42a7e720c0"
 
     define_method(:install) do
       bin.install "nepenthe"
@@ -27,6 +27,14 @@ class Nepenthe < Formula
   end
 
   depends_on :macos
+
+  service do
+    run [opt_bin/"nepenthe", "scan", "--accept-consents", "--log-format", "json"]
+    run_type :interval
+    interval 86400
+    log_path var/"log/nepenthe/stdout.log"
+    error_log_path var/"log/nepenthe/stderr.log"
+  end
 
   test do
     system bin/"nepenthe", "version"
