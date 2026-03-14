@@ -1,6 +1,6 @@
 cask "helios" do
-  version "0.3.1"
-  sha256 "878ecf81651aec2829cbbade3c9fb463423a9ff115a1ed730ece9c99eea63953"
+  version "0.3.2"
+  sha256 "bbf18ca5e789d726adb87b1a3ec1f7782f9331ff5b8629453a61080d7e17737e"
 
   url "https://github.com/ryanwersal/helios/releases/download/v#{version}/Helios.app.zip"
   name "Helios"
@@ -8,6 +8,8 @@ cask "helios" do
   homepage "https://github.com/ryanwersal/helios"
 
   depends_on macos: ">= :sonoma"
+
+  no_quarantine true
 
   app "Helios.app"
 
