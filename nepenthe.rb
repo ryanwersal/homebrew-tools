@@ -5,21 +5,21 @@
 class Nepenthe < Formula
   desc "Selective forgetfulness for macOS Time Machine"
   homepage "https://github.com/ryanwersal/nepenthe"
-  version "0.1.1"
+  version "0.1.2"
   license "GPL-3.0"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/ryanwersal/nepenthe/releases/download/v0.1.1/nepenthe_0.1.1_darwin_amd64.tar.gz"
-    sha256 "a942a19f6503bc76b0469700c2dbee02589e3af7249d7e25d7fb3824a900a409"
+    url "https://github.com/ryanwersal/nepenthe/releases/download/v0.1.2/nepenthe_0.1.2_darwin_amd64.tar.gz"
+    sha256 "024a1e1111c303e2e2b9df0d2c00546abe3dfcd16904c87de40a45102d2990ca"
 
     define_method(:install) do
       bin.install "nepenthe"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/ryanwersal/nepenthe/releases/download/v0.1.1/nepenthe_0.1.1_darwin_arm64.tar.gz"
-    sha256 "f6d24148bd7990cc7f2ca17289132433fbcdb871efe5dc0cefc50f42a7e720c0"
+    url "https://github.com/ryanwersal/nepenthe/releases/download/v0.1.2/nepenthe_0.1.2_darwin_arm64.tar.gz"
+    sha256 "b3bc4a5289b69673c29ef13547c54dcefa25038c19f52e4525a42b1d5ca62e09"
 
     define_method(:install) do
       bin.install "nepenthe"
