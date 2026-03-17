@@ -1,6 +1,6 @@
 cask "helios" do
-  version "0.3.3"
-  sha256 "8a117aa48a2926fa14dbd6672693900e1b5ce4e1b18b6ffd475a27f4dd29e604"
+  version "0.3.4"
+  sha256 "bffaa2cb329f7e2b951ff335113524ea4ebdea5fa8b717dcd449e914bbaf9f1a"
 
   url "https://github.com/ryanwersal/helios/releases/download/v#{version}/Helios.app.zip"
   name "Helios"
@@ -9,9 +9,13 @@ cask "helios" do
 
   depends_on macos: ">= :sonoma"
 
-  no_quarantine true
-
   app "Helios.app"
+
+  postflight do
+    system_command "/usr/bin/xattr",
+      args: ["-r", "-d", "com.apple.quarantine", "#{appdir}/Helios.app"],
+      sudo: false
+  end
 
   zap trash: [
     "~/Library/Caches/com.helios.launcher",
