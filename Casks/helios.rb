@@ -1,6 +1,6 @@
 cask "helios" do
-  version "0.3.4"
-  sha256 "bffaa2cb329f7e2b951ff335113524ea4ebdea5fa8b717dcd449e914bbaf9f1a"
+  version "0.3.5"
+  sha256 "979c4dca97fb7c384876509d67be75c6d2ee934c653cd2d9d2b9d8a2eea712e7"
 
   url "https://github.com/ryanwersal/helios/releases/download/v#{version}/Helios.app.zip"
   name "Helios"
