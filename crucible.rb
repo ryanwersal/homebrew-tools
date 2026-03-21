@@ -5,21 +5,21 @@
 class Crucible < Formula
   desc "A declarative dotfile and system configuration manager"
   homepage "https://github.com/ryanwersal/crucible"
-  version "0.1.4"
+  version "0.1.6"
   license "GPL-3.0"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/ryanwersal/crucible/releases/download/v0.1.4/crucible_0.1.4_darwin_amd64.tar.gz"
-    sha256 "5a0bc3c5c8eed931f82e496fd8bd03b8530346b8177274c1b2dda9863d943ba5"
+    url "https://github.com/ryanwersal/crucible/releases/download/v0.1.6/crucible_0.1.6_darwin_amd64.tar.gz"
+    sha256 "1c8ea728abeecda1f8007e572030b1c2c94876183156a008b6c5d36a218741f4"
 
     define_method(:install) do
       bin.install "crucible"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/ryanwersal/crucible/releases/download/v0.1.4/crucible_0.1.4_darwin_arm64.tar.gz"
-    sha256 "044fc100080ae22e55fceb5c27b315a686368a7bbde2d6767a59aa2f70d30a1c"
+    url "https://github.com/ryanwersal/crucible/releases/download/v0.1.6/crucible_0.1.6_darwin_arm64.tar.gz"
+    sha256 "744d50515812cb3fafd423a94c0081e77098c65065de5842b0c2bc86014aa743"
 
     define_method(:install) do
       bin.install "crucible"
