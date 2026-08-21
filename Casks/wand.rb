@@ -17,8 +17,6 @@ cask "wand" do
   desc "Read-only, agent-first CLI for the Wiz GraphQL API"
   homepage "https://github.com/ryanwersal/wand"
 
-  license "Apache-2.0"
-
   livecheck do
     skip "Auto-generated on release."
   end
