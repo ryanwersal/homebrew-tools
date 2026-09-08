@@ -6,16 +6,16 @@ cask "crucible" do
     end
   end
 
-  version "0.2.12"
+  version "0.2.13"
 
   on_macos do
     on_intel do
       url "https://github.com/ryanwersal/crucible/releases/download/v#{version}/crucible_#{version}_darwin_amd64.tar.gz"
-      sha256 "06b0e9a0f68f2a5b13718fc24f856dde823ddaa854cc3115a28d615df60adeb0"
+      sha256 "597d5d55013291d20ab39867ba84059e14568e0ec2d721b124daa55cf8971e8e"
     end
     on_arm do
       url "https://github.com/ryanwersal/crucible/releases/download/v#{version}/crucible_#{version}_darwin_arm64.tar.gz"
-      sha256 "58675a1d8c061a86caea2d507fa55b779222a36c7abf9b2f2fb82e75fc83bee6"
+      sha256 "3a91a99f47984ee180c6cb379a2025a83591d9b6368b35d3ba087d833183db7e"
     end
   end
 
